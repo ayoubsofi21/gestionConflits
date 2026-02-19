@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guide Complet Git</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-gray-100 text-gray-800">
+    <div class="max-w-6xl mx-auto p-8">
+      <h1 class="text-4xl font-bold text-center mb-10 text-indigo-600">
+        🚀 Guide Complet des Commandes Git
+      </h1>
+
+      <!-- 1️⃣ Configuration -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
+        <h2 class="text-2xl font-bold text-indigo-500 mb-4">
+          🔹 1️⃣ Configuration de Git
+        </h2>
+        <p class="mb-3">Configurer Git (nom, email, éditeur…)</p>
+
+        <div
+          class="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm mb-2"
+        >
+          git config --global user.name "Ayoub Sofi"<br />
+          git config --global user.email "ayoub@email.com"
+        </div>
+        <p class="text-gray-700 mb-4 text-sm">
+          Définit ton nom et ton email pour tous les commits sur tous les
+          projets (--global). Sans --global, la configuration ne s'applique
+          qu'au dépôt actuel.
+        </p>
+
+        <div
+          class="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm"
+        >
+          git config --list
+        </div>
+        <p class="text-gray-700 text-sm mt-2">
+          Affiche toutes les configurations Git actives.
+        </p>
+      </div>
+
+      <!-- 2️⃣ Initialisation & Clonage -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
+        <h2 class="text-2xl font-bold text-indigo-500 mb-4">
+          🔹 2️⃣ Initialisation & Clonage
+        </h2>
+
+        <div
+          class="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm mb-2"
+        >
+          git init
+        </div>
+        <p class="text-gray-700 mb-4 text-sm">
+          Crée un nouveau dépôt Git dans le dossier actuel et ajoute le dossier
+          caché <strong>.git</strong> contenant l'historique.
+        </p>
+
+        <div
+          class="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm"
+        >
+          git clone https://github.com/user/project.git
+        </div>
+        <p class="text-gray-700 mt-2 text-sm">
+          Copie un dépôt distant (ex: GitHub) sur ton PC avec tout l'historique.
+        </p>
+      </div>
+
+      <!-- 3️⃣ Vérification -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
+        <h2 class="text-2xl font-bold text-indigo-500 mb-4">
+          🔹 3️⃣ Vérification de l’état
+        </h2>
+
+        <div class="space-y-4">
+          <div>
+            <div
+              class="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm"
+            >
+              git status
+            </div>
+            <p class="text-gray-700 text-sm mt-1">
+              Affiche l’état des fichiers : modifiés, ajoutés, ou non suivis.
+            </p>
+          </div>
+
+          <div>
+            <div
+              class="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm"
+            >
+              git log
+            </div>
+            <p class="text-gray-700 text-sm mt-1">
+              Montre l’historique complet des commits.
+            </p>
+          </div>
+
+          <div>
+            <div
+              class="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm"
+            >
+              git log --oneline
+            </div>
+            <p class="text-gray-700 text-sm mt-1">
+              Version courte de l’historique, un commit par ligne.
+            </p>
+          </div>
+
+          <div>
+            <div
+              class="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm"
+            >
+              git diff
+            </div>
+            <p class="text-gray-700 text-sm mt-1">
+              Montre les différences entre les fichiers modifiés et le dernier
+              commit.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4️⃣ Ajouter & Commit -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
+        <h2 class="text-2xl font-bold text-indigo-500 mb-4">
+          🔹 4️⃣ Ajouter & Commit
+        </h2>
+
+        <div class="space-y-4">
+          <div>
+            <div
+              class="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm"
+            >
+              git add file.js
+            </div>
+            <p class="text-gray-700 text-sm mt-1">
+              Prépare un fichier spécifique pour le prochain commit.
+            </p>
+          </div>
+
+          <div>
+            <div
+              class="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm"
+            >
+              git add .
+            </div>
+            <p class="text-gray-700 text-sm mt-1">
+              Prépare tous les fichiers modifiés pour le prochain commit.
+            </p>
+          </div>
+
+          <div>
+            <div
+              class="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm"
+            >
+              git commit -m "Add scoring function"
+            </div>
+            <p class="text-gray-700 text-sm mt-1">
+              Crée un commit avec un message descriptif.
+            </p>
+          </div>
+
+          <div>
+            <div
+              class="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm"
+            >
+              git commit -am "Fix bug"
+            </div>
+            <p class="text-gray-700 text-sm mt-1">
+              Combine add + commit pour tous les fichiers déjà suivis.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5️⃣ Branches -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
+        <h2 class="text-2xl font-bold text-indigo-500 mb-4">🔹 5️⃣ Branches</h2>
+
+        <div class="space-y-4">
+          <div>
+            <div
+              class="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm"
+            >
+              git branch
+            </div>
+            <p class="text-gray-700 text-sm mt-1">
+              Liste toutes les branches locales.
+            </p>
+          </div>
+
+          <div>
+            <div
+              class="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm"
+            >
+              git branch feature-algorithm
+            </div>
+            <p class="text-gray-700 text-sm mt-1">
+              Crée une nouvelle branche appelée feature-algorithm.
+            </p>
+          </div>
+
+          <div>
+            <div
+              class="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm"
+            >
+              git checkout feature-algorithm
+            </div>
+            <p class="text-gray-700 text-sm mt-1">
+              Change de branche pour se positionner sur feature-algorithm.
+            </p>
+          </div>
+
+          <div>
+            <div
+              class="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm"
+            >
+              git checkout -b feature-ui
+            </div>
+            <p class="text-gray-700 text-sm mt-1">
+              Crée une nouvelle branche et s’y positionne directement.
+            </p>
+          </div>
+
+          <div>
+            <div
+              class="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm"
+            >
+              git switch feature-ui<br />
+              git switch -c new-branch
+            </div>
+            <p class="text-gray-700 text-sm mt-1">
+              Nouvelle façon moderne de changer ou créer+changer de branche.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Merge -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
+        <h2 class="text-2xl font-bold text-indigo-500 mb-4">
+          🔹 6️⃣ Fusion (Merge)
+        </h2>
+
+        <div
+          class="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm"
+        >
+          git merge feature-algorithm
+        </div>
+        <p class="text-gray-700 mt-2 text-sm">
+          Fusionne la branche feature-algorithm dans la branche actuelle. ⚠️
+          Peut générer des conflits.
+        </p>
+      </div>
+
+      <!-- Conflits -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
+        <h2 class="text-2xl font-bold text-indigo-500 mb-4">🔹 7️⃣ Conflits</h2>
+
+        <div
+          class="bg-red-100 text-red-700 p-4 rounded-lg mb-2 font-mono text-sm"
+        >
+          CONFLICT (content): Merge conflict
+        </div>
+        <p class="text-gray-700 text-sm mb-2">
+          Indique qu’un fichier a été modifié dans deux branches. Supprimer les
+          marqueurs <<<<<<<, =======, >>>>>>> pour corriger le conflit.
+        </p>
+
+        <div
+          class="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm"
+        >
+          git add .<br />
+          git commit -m "Resolve merge conflict"
+        </div>
+        <p class="text-gray-700 mt-2 text-sm">
+          Après correction, ajoute et commit le fichier.
+        </p>
+      </div>
+
+      <!-- Dépôt distant -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
+        <h2 class="text-2xl font-bold text-indigo-500 mb-4">
+          🔹 8️⃣ Dépôt distant
+        </h2>
+
+        <div class="space-y-4">
+          <div>
+            <div
+              class="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm"
+            >
+              git remote -v
+            </div>
+            <p class="text-gray-700 text-sm mt-1">
+              Affiche les dépôts distants configurés.
+            </p>
+          </div>
+
+          <div>
+            <div
+              class="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm"
+            >
+              git remote add origin https://github.com/user/project.git
+            </div>
+            <p class="text-gray-700 text-sm mt-1">
+              Ajoute un dépôt distant nommé origin.
+            </p>
+          </div>
+
+          <div>
+            <div
+              class="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm"
+            >
+              git push origin main
+            </div>
+            <p class="text-gray-700 text-sm mt-1">
+              Envoie les commits vers le dépôt distant.
+            </p>
+          </div>
+
+          <div>
+            <div
+              class="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm"
+            >
+              git pull origin main
+            </div>
+            <p class="text-gray-700 text-sm mt-1">
+              Récupère et fusionne les changements distants.
+            </p>
+          </div>
+
+          <div>
+            <div
+              class="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm"
+            >
+              git fetch
+            </div>
+            <p class="text-gray-700 text-sm mt-1">
+              Récupère les changements distants sans les fusionner.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Résumé -->
+      <div class="bg-indigo-600 text-white rounded-2xl shadow-lg p-6">
+        <h2 class="text-2xl font-bold mb-4">🧠 Résumé simple</h2>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm">
+          <div>init → créer repo</div>
+          <div>clone → copier repo</div>
+          <div>add → préparer commit</div>
+          <div>commit → sauvegarder</div>
+          <div>branch → créer branche</div>
+          <div>checkout → changer branche</div>
+          <div>merge → fusionner</div>
+          <div>push → envoyer</div>
+          <div>pull → récupérer</div>
+          <div>reset → annuler</div>
+          <div>stash → sauvegarde temporaire</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
